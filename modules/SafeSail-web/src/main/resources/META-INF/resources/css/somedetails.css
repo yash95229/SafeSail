@@ -1,0 +1,146 @@
+
+        .some-details-about {
+            padding: 0px 100px;
+            width: 100%;
+        }
+
+        .page-heading h2 {
+            color: #15658D;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .instructions p {
+            color: #15658D;
+            font-size: 14px;
+            margin-bottom: 17px;
+        }
+
+        .agree-terms-wrapper .form-group label {
+            position: relative;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+
+        .agree-terms-wrapper .form-group label:before {
+            content: '';
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 2px solid #15658D;
+            box-shadow: none;
+            padding: 0;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 15px;
+            height: 16px;
+            width: 16px;
+        }
+
+        .agree-terms-wrapper .form-group input {
+            padding: 0;
+            height: initial;
+            width: initial;
+            margin-bottom: 0;
+            display: none;
+            cursor: pointer;
+        }
+
+          .agree-terms-wrapper .form-group input:checked + div + label:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 7px;
+        left: 6px;
+        width: 5px;
+        height: 10px;
+        border: 2px solid #ffffff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
+    .agree-terms-wrapper .form-group input:checked + div + label:before {
+        background-color: #15658D;
+        border: none;
+    }
+    
+    .agree-terms-wrapper .error {position: absolute;
+    bottom: -18px;
+    left: 0;}
+    
+    .agree-terms-wrapper .form-group input {position: absolute;
+    top: 0;
+    left: 0;}
+   
+    
+
+
+        .total-and-year h2 {
+            color: #15658D;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .total-and-year span {
+            color: #15658D;
+            font-size: 30px;
+            font-weight: normal;
+        }
+
+        /* .agree-lines {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        } */
+
+
+        .agree-terms-wrapper label {
+            margin-bottom: 14px;
+        }
+
+        .total-and-year {
+            margin-bottom: 25px;
+        }
+
+        .procced-form a {
+         background:url("/documents/d/safe_sail/icon-ionic-md-download");
+            font-size: 16px;
+            font-weight: 500;
+            color: #368BBA;
+            text-decoration: underline;
+        }
+
+        .buttons-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        @media only screen and (max-width:992px) {
+            .some-details-about {
+                padding: 0px 40px;
+            }
+        }
+
+        @media only screen and (max-width:767px) {
+            .some-details-about {
+                padding: 0px 15px;
+            }
+
+            .total-and-year h2 {
+                font-size: 26px;
+            }
+
+            .buttons-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .procced-form {
+                margin-top: 30px;
+            }
+        }
+    

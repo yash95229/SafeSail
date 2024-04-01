@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.safesail.model.AadhaarVerification">
+		<field name="aadhaarId" type="long" />
+		<field name="aadhaarUserName" type="String" />
+		<field name="aadhaarNumber" type="String" />
+	</model>
+	<model name="com.safesail.model.FieldConfiguration">
+		<field name="configId" type="long" />
+		<field name="fieldName" type="String" />
+		<field name="fieldData" type="String" />
+		<field name="fieldValue" type="String" />
+		<field name="fieldSumAssured" type="String" />
+		<field name="selectImage" type="String" />
+		<field name="fieldShow" type="Boolean" />
+	</model>
+	<model name="com.safesail.model.LifeInsurance">
+		<field name="uuid" type="String" />
+		<field name="quoteId" type="String" />
+		<field name="fullname" type="String" />
+		<field name="dob" type="Date" />
+		<field name="gender" type="String" />
+		<field name="phoneNo" type="long" />
+		<field name="emailAddress" type="String" />
+		<field name="aadharNumber" type="String" />
+		<field name="panNumber" type="String" />
+		<field name="annualIncome" type="String" />
+		<field name="sumAssured" type="long" />
+		<field name="policyTerm" type="int" />
+		<field name="PPTerm" type="int" />
+		<field name="paymentFrequency" type="String" />
+		<field name="PayoutOption" type="String" />
+		<field name="lifeSecure" type="int" />
+		<field name="lifePlus" type="int" />
+		<field name="CIPBenefit" type="int" />
+		<field name="addOnBenefits" type="String" />
+		<field name="totalValues" type="long" />
+		<field name="totalAddon" type="long" />
+		<field name="agreement" type="Boolean" />
+		<field name="userId" type="long" />
+	</model>
+	<model name="com.safesail.model.PanCardVerification">
+		<field name="panId" type="long" />
+		<field name="panUserName" type="String" />
+		<field name="panNumber" type="String" />
+	</model>
+	<model name="com.safesail.model.Policy">
+		<field name="uuid" type="String" />
+		<field name="bookingId" type="long" />
+		<field name="applicationNumber" type="long" />
+		<field name="userId" type="long" />
+		<field name="fullName" type="String" />
+		<field name="planName" type="String" />
+		<field name="annualIncome" type="String" />
+		<field name="bookingDate" type="Date" />
+		<field name="sumAssured" type="long" />
+		<field name="policyTerm" type="int" />
+		<field name="maturityDate" type="Date" />
+		<field name="paymentFrequency" type="String" />
+		<field name="totalPremium" type="long" />
+		<field name="totalAddon" type="long" />
+		<field name="status" type="int" />
+		<field name="quoteId" type="String" />
+	</model>
+	<model name="com.safesail.model.ProductTable">
+		<field name="uuid" type="String" />
+		<field name="productId" type="long" />
+		<field name="productName" type="String" />
+		<field name="premiumDiscount" type="int" />
+		<field name="totalDiscount" type="int" />
+		<field name="yearPay" type="long" />
+		<field name="monthPay" type="long" />
+		<field name="totalPremium" type="long" />
+	</model>
+	<model name="com.safesail.model.UserTable">
+		<field name="uuid" type="String" />
+		<field name="quoteId" type="String" />
+		<field name="userId" type="long" />
+		<field name="userType" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,4 @@
+Bundle-Name: Add-Aadhaar-Pan-Web
+Bundle-SymbolicName: Add.Aadhaar.Pan.Web
+Bundle-Version: 1.0.0
+Export-Package: Add.Aadhaar.Pan.Web.constants

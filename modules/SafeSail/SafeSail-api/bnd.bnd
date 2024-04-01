@@ -1,0 +1,10 @@
+Bundle-Name: SafeSail-api
+Bundle-SymbolicName: com.safesail.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.safesail.exception,\
+	com.safesail.model,\
+	com.safesail.service,\
+	com.safesail.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../SafeSail-service/service.xml

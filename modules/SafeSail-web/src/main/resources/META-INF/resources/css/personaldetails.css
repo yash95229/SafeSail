@@ -1,0 +1,236 @@
+
+.personal-detail {
+    padding: 0 100px;
+} 
+.personal-detail form {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 70px;
+    margin: 70px 0px;
+}
+.personal-detail-heading h1 {
+    letter-spacing: 0px;
+    color: #15658D;
+    font-size: 30px;
+    margin-bottom: 34px;
+    font-weight: bold;
+}
+.personal-detail form label {
+    letter-spacing: 0px;
+    color: #15658D;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.personal-detail form .form-control {
+    height: 62px;
+    border: 1px solid #EFEFEF;
+}
+.personal-detail form .form-control::placeholder {
+    color: #15658D;
+    opacity: 0.2;
+    font-size: 16px;
+}
+.gender-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+.gender-wrapper label {
+    width: 100%;
+}
+.gender-wrapper label:before {
+    display: none;
+}
+.gender-inner-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px;
+    height: 62px;
+    padding: 10px;
+    cursor: pointer;
+}
+.gender-wrapper label:after {
+    display: none;
+}
+.gender-inner-wrapper p {
+    margin-bottom: 0;
+}
+
+.gender-wrapper .custom-radio {
+    padding-left: 0;
+}
+
+.agree-terms-wrapper .form-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.agree-terms-wrapper .form-group label {
+  position: relative;
+  cursor: pointer;
+}
+
+.agree-terms-wrapper .form-group label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #15658D;
+    box-shadow: none;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 15px;
+    height: 20px;
+    width: 20px;
+}
+.agree-terms-wrapper .form-group input:checked + label:before{
+    background-color: #15658D;
+    border: none;
+}
+.agree-terms-wrapper .form-group input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 5px;
+    height: 10px;
+    border: 2px solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.agree-terms-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.agree-terms-wrapper a {
+    color: #368BBA;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.agree-terms-wrapper .form-group{
+    margin-bottom: 0;
+}
+.personal-detail .agree-terms-wrapper label {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.personal-detail .proceed {
+    background: #15658D 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    border: none;
+    padding: 9px 35px;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+.personal-detail .proceed:focus,
+.personal-detail .proceed:not(:disabled):not(.disabled):active:focus
+{
+    box-shadow: none;
+}
+
+.personal-detail .proceed:active,
+.personal-detail .proceed:not(:disabled):not(.disabled):active
+{
+    background: #15658D 0% 0% no-repeat padding-box;
+}
+.form-btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gender-wrapper label.custom-control-label {
+    margin-bottom: 0;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+.product-download a {
+    color: #15658D;
+    font-size: 16px;
+}
+.product-download a img {
+    padding-right: 8px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    background: url('./images/Icon\ feather-calendar.svg') no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.annual-wrapper select {
+    appearance: none;
+    background: transparent;
+    background-image: url(http://localhost:8080/webdav/guest/document_library/material-keyboard-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: center right 20px;
+}
+.personal-detail form .form-control:focus {
+    box-shadow: none;
+    border: 1px solid #EFEFEF;
+}
+input {
+  display: none;
+}
+
+.annual-wrapper select:invalid { 
+    color: red; 
+}
+
+.gender-wrapper input:checked + .gender-inner-wrapper {
+ border: 2px solid #15658D;
+}
+@media only screen and (max-width: 991px)  {
+    .personal-detail{
+        padding: 0 40px;
+    }
+    .personal-detail form{
+        padding: 50px;
+    }
+}
+@media only screen and (max-width: 767px)  {
+    .personal-detail{
+        padding: 0 15px;
+    }
+   .personal-detail .gender-wrapper{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .personal-detail form{
+        padding: 15px;
+    }
+    .agree-terms-wrapper {
+    flex-direction: column;
+    align-items: self-start;
+}
+    .personal-detail .agree-terms-wrapper label {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.personal-detail .proceed{
+    margin-bottom: 0;
+}
+
+}
+
+

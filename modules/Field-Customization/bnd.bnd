@@ -1,0 +1,4 @@
+Bundle-Name: Field-Customization
+Bundle-SymbolicName: Field.Customization
+Bundle-Version: 1.0.0
+Export-Package: Field.Customization.constants

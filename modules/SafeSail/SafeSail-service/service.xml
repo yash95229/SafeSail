@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds"
+	package-path="com.safesail">
+	<namespace>Safe_Sail</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" 
+		remote-service="false" session-factory="sampleSessionFactory" table="foo" 
+		tx-manager="sampleTransactionManager uuid="true""> -->
+	<entity local-service="true" name="LifeInsurance" remote-service="true"
+		uuid="true">
+		
+		<column name="quoteId" primary="true" type="String" />
+		<!-- Other fields -->
+
+		<column name="fullname" type="String" />
+		<column name="dob" type="Date" />
+		<column name="gender" type="String" />
+		<column name="phoneNo" type="long" />
+		<column name="emailAddress" type="String" />
+		<column name="aadharNumber" type="String" />
+		<column name="panNumber" type="String" />
+		<column name="annualIncome" type="String" />
+
+		<column name="sumAssured" type="long" />
+		<column name="policyTerm" type="int" />
+		<column name="PPTerm" type="int" />
+		<column name="paymentFrequency" type="String" />
+		<column name="PayoutOption" type="String" />
+
+		<column name="lifeSecure" type="int" />
+		<column name="lifePlus" type="int" />
+		<column name="CIPBenefit" type="int" />
+		<column name="addOnBenefits" type="String"/>
+		
+		<column name="totalValues" type="long" />
+		<column name="totalAddon" type="long" />
+
+		<column name="agreement" type="Boolean" />
+
+		<column name="userId" type="long" />
+
+
+		<finder name="userId" return-type="LifeInsurance">
+			<finder-column name="userId" />
+		</finder>
+		
+		<finder name="quoteId" return-type="LifeInsurance">
+			<finder-column name="quoteId" />
+		</finder>
+		<finder name="quoteIds" return-type="Collection">
+			<finder-column name="quoteId" />
+		</finder>
+		
+		<finder name="aadharNumber" return-type="LifeInsurance">
+			<finder-column name="aadharNumber" />
+		</finder>
+
+	<finder name="emailAddress" return-type="Collection">
+			<finder-column name="emailAddress" />
+		</finder>
+
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+	</entity>
+
+
+
+<entity local-service="true" name="UserTable" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="quoteId" primary="true" type="String" />
+
+		<!-- Other fields -->
+
+		<column name="userId" type="long"/>
+		<column name="userType" type="String" />
+				
+
+		
+		<finder name="userId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+		<finder name="quoteId" return-type="UserTable">
+			<finder-column name="quoteId" />
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="Policy" uuid="true">
+				<!-- PK fields -->
+		<column name="bookingId" primary="true" type="long" />
+		<column name="applicationNumber" primary="true" type="long" />
+				<!-- Other fields -->
+		<column name="userId" type="long"/>
+		<column name="fullName" type="String" />
+		<column name="planName" type="String" />
+		<column name="annualIncome" type="String" />
+		<column name="bookingDate" type="Date" />
+		<column name="sumAssured" type="long" />
+		<column name="policyTerm" type="int" />
+		<column name="maturityDate" type="Date" />
+		<column name="paymentFrequency" type="String"/>
+		<column name="totalPremium" type="long"/>
+		<column name="totalAddon" type="long"/>
+		<column name="status" type="int"/>
+		
+		<column name="quoteId" primary="true" type="String" />
+		
+		<!-- finder -->
+		<finder name="quoteId" return-type="Policy">
+			<finder-column name="quoteId" />
+		</finder>
+		<finder name="applicationNumber" return-type="Policy">
+			<finder-column name="applicationNumber" />
+		</finder>
+		<finder name="userId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+		
+	</entity>
+	
+	
+	
+	<entity local-service="true" name="ProductTable" uuid="true">
+				<!-- PK fields -->
+		<column name="productId" primary="true" type="long" />
+		<column name="productName" type="String" />
+		<column name="premiumDiscount" type="int" />
+		<column name="totalDiscount" type="int" />
+		<column name="yearPay" type="long" />
+		<column name="monthPay" type="long" />
+		<column name="totalPremium" type="long" />	
+		
+		<!-- finder -->
+		<finder name="productId" return-type="ProductTable">
+			<finder-column name="productId" />
+		</finder>
+		<finder name="productName" return-type="ProductTable">
+			<finder-column name="productName" />
+		</finder>
+		
+		
+	</entity>
+	
+	
+	<entity local-service="true" name="FieldConfiguration">
+				<!-- PK fields -->
+		<column name="configId" primary="true" type="long" />
+				<!-- Other fields -->
+		<column name="fieldName" type="String" />
+		<column name="fieldData" type="String" />
+		<column name="fieldValue" type="String" />
+		<column name="fieldSumAssured" type="String"/>
+		<column name="selectImage" type="String"/>
+		<column name="fieldShow" type="Boolean"/>
+		
+		<!-- finder -->
+		<finder name="configId" return-type="Collection">
+			<finder-column name="configId" />
+		</finder>
+		<finder name="fieldName" return-type="Collection">
+			<finder-column name="fieldName" />
+		</finder>
+		
+		<finder name="fieldData" return-type="Collection">
+			<finder-column name="fieldData" />
+		</finder>
+			<finder name="fieldValue" return-type="Collection">
+			<finder-column name="fieldValue" />
+		</finder>
+		<finder name="fieldSumAssured" return-type="Collection">
+			<finder-column name="fieldSumAssured" />
+		</finder>
+		<finder name="fieldShow" return-type="FieldConfiguration">
+			<finder-column name="fieldShow" />
+		</finder>
+		
+	</entity>
+	
+	<entity local-service="true" name="PanCardVerification">
+		<column name="panId" primary="true" type="long" />
+		<column name="panUserName" type="String" />
+		<column name="panNumber" type="String" />
+		
+	<finder name="panNumber" return-type="Collection">
+			<finder-column name="panNumber" />
+		</finder>
+		
+		
+	</entity>
+	
+	<entity local-service="true" name="AadhaarVerification">
+		<column name="aadhaarId" primary="true" type="long" />
+		<column name="aadhaarUserName" type="String" />
+		<column name="aadhaarNumber" type="String" />
+		
+	<finder name="aadhaarNumber" return-type="Collection">
+			<finder-column name="aadhaarNumber" />
+		</finder>
+		
+	</entity>
+
+
+</service-builder>

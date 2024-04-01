@@ -1,0 +1,234 @@
+
+      .switch input
+{
+  display: none;
+}
+
+.term-insutance  .switch 
+{
+  display: inline-block;
+  width: 50px; 
+  height: 30px;
+  margin: 4px;
+  transform: translateY(50%);
+  position: relative;
+}
+
+.term-insutance  .slider
+{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 30px;
+  box-shadow: 0 0 0 2px #15658d, 0 0 4px #15658d;
+  cursor: pointer;
+  border: 4px solid transparent;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.term-insutance .slider:before
+{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #15658d;
+  border-radius: 30px;
+  transform: translateX(-30px); /*translateX(-(w-h))*/
+  transition: 0.2s;
+}
+
+.term-insutance input:checked + .slider:before
+{
+  transform: translateX(19px); /*translateX(w-h)*/
+}
+
+
+
+.term-insutance .switch200 .slider:before
+{
+  width: 200%;
+  transform: translateX(-62px); /*translateX(-(w-h))*/
+}
+
+.switch200 input:checked + .slider:before
+{
+  background-color: white;
+}
+
+.switch200 input:checked + .slider
+{
+    background-color: #15658d;
+}
+.term-insutance {
+    padding: 0 100px;
+}
+.term-insutance__benefits {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 70px;
+    margin: 70px 0px;
+}
+.term-insurance__heading h2 {
+    letter-spacing: 0px;
+    color: #15658D;
+    font-size: 30px;
+    margin-bottom: 34px;
+    font-weight: bold;
+}
+.term-insurance__img__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.term-insurance__body {
+    border: 1px solid #368BBA;
+    border-radius: 10px;
+    padding: 20px;
+}
+.term-insurance__quote p {
+    letter-spacing: 0px;
+    color: #368BBA;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.term-insurance__card__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.term-insurance__img__inner__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.term-insurance__img {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    padding: 10px;
+}
+.term-insurance__name__wrapper h3 {
+    letter-spacing: 0px;
+    color: #15658D;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.term-insurance__name__wrapper p{
+    letter-spacing: 0px;
+    color: #15658D;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.term-insurance__premium {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.term-insurance__premium__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+.term-insurance__premium__wrapper h2 {
+    letter-spacing: 0px;
+    color: #15658D;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.term-insurance__premium__wrapper span{
+    display: block;
+    text-align: end;
+    letter-spacing: 0px;
+    color: #15658D;
+    font-size: 14px;
+}
+.term-insurance__amount p {
+    font-size: 24px;
+    letter-spacing: 0px;
+    color: #15658D;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.term-insurance__btn__group__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+.btn a:hover{
+    text-decoration: none;
+}
+.primary-btn-wrapper a {
+    background: #15658D 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    padding: 9px 32px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+.secondary-btn-wrapper a {
+    border: 1px solid #15658D;
+    border-radius: 20px;
+    padding: 9px 22px;
+    color: #15658D;
+    font-size: 18px;
+}
+.product-download a {
+    text-decoration: none;
+}
+
+.term-insurance__donwload__brochure a {
+    text-decoration: underline;
+    color: #368BBA !important;
+	font-size: 16px;
+}	
+
+.term-insurance__donwload__brochure {
+    display: flex;
+    gap: 20px;
+}
+.term-insurance__donwload__brochure .product-download a {
+    text-decoration: none;
+}
+@media only screen and (max-width: 767px){
+   body .term-insutance{
+        padding: 0 15px;
+    }
+    .term-insutance .term-insutance__benefits{
+        padding: 15px;
+    }
+    .term-insurance__card__wrapper, .term-insurance__premium{
+        grid-template-columns: 1fr;
+    }
+    .term-insurance__btn__group__wrapper{
+        flex-direction: column;
+        align-items: start;
+    }
+    .btn{
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    .term-insurance__donwload__brochure a{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .term-insutance{
+        padding: 0 40px;
+    }
+    .term-insutance__benefits{
+        padding: 50px;
+    }
+}
